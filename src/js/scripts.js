@@ -1,12 +1,22 @@
  // All functions  ------------------
+ 
+ 
  function initTheroof() {
 	 $('head').append('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">');
      "use strict";
-     $(".loader-holder").fadeOut(500, function() {
-         $("#main").animate({
-             opacity: "1"
-         }, 500);
-     });
+    try{
+        $(".loader-holder").fadeOut(500, function() {
+            
+            $("#main").animate({
+                opacity: "1"
+            }, 500);
+            alert("Helo world 333")
+        });
+    }
+     
+     catch(error){
+        alert(error)
+     }
      $(".style-select").niceSelect();
      //   lightGallery------------------
      function lightGalleryInit() {

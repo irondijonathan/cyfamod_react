@@ -16,7 +16,7 @@ const Home = () => {
     <div>
 
 
-<div className="loader-holder">
+    <div className="loader-holder">
 		<span></span>
 		<span></span>
 		<span></span>
