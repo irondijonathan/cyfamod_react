@@ -9,6 +9,20 @@ import pngi from "./../images/clients/1.png"
 import jpgiii from "./../images/avatar/3.jpg"
 import jpgvi from "./../images/folio/6.jpg"
 import logopng from "./../images/logo.png"
+import jpgv from "./../images/bg/5.jpg"
+import bgjpgiii from "./../images/bg/3.jpg"
+import bgxxxivjpg from "./../images/bg/34.jpg"
+import bgxxxiijpg from "./../images/bg/32.jpg"
+import bgxijpg from "./../images/bg/6.jpg"
+import incjpg from "./../images/bg/inc.jpg"
+import servijpg from "./../images/services/1.jpg"
+import servxijpg from "./../images/services/6.jpg"
+import longiijpg from "./../images/bg/long/2.jpg"
+import longijpg from "./../images/bg/long/1.jpg"
+import serviiijpg from "./../images/services/3.jpg"
+import bgxixjpg from "./../images/bg/3.jpg"
+import longiiijpg from "./../images/bg/long/3.jpg"
+import longivjpg from "./../images/bg/long/4.jpg"
 
 
 const Home = () => {
@@ -126,38 +140,38 @@ const Home = () => {
 										
 										<div className="swiper-slide">
 											<div className="slideshow-item fl-wrap">
-												<div className="bg  " data-bg="images/bg/3.jpg"></div>
+												<div className="bg  " data-bg={bgjpgiii}></div>
 											</div>
 										</div>
 										
 											<div className="swiper-slide">
 												<div className="slideshow-item   fl-wrap">
-													<div className="bg  " data-bg="images/bg/34.jpg"></div>
+													<div className="bg  " data-bg={bgxxxivjpg}></div>
 												</div>
 											</div>
 											
 												<div className="swiper-slide ">
 													<div className="slideshow-item fl-wrap">
-														<div className="bg  " data-bg="images/bg/32.jpg"></div>
+														<div className="bg  " data-bg={bgxxxiijpg}></div>
 													</div>
 												</div>
 												
 												<div className="swiper-slide">
 													<div className="slideshow-item fl-wrap">
-														<div className="bg  " data-bg="images/bg/6.jpg"></div>
+														<div className="bg  " data-bg={bgxijpg}></div>
 													</div>
 												</div>
 												
 											<div className="swiper-slide">
 												<div className="slideshow-item   fl-wrap">
-													<div className="bg  " data-bg="images/bg/5.jpg"></div>
+													<div className="bg  " data-bg={jpgv}></div>
 												</div>
 											</div>
 											
 
 										<div className="swiper-slide">
 											<div className="slideshow-item fl-wrap">
-												<div className="bg  " data-bg="images/bg/inc.jpg"></div>
+												<div className="bg  " data-bg={incjpg}></div>
 											</div>
 										</div>
 										
@@ -303,7 +317,7 @@ const Home = () => {
 											</div>
 										</div>
 										<div className="content-back">
-											<div className="bg " data-bg="images/services/1.jpg"></div>
+											<div className="bg " data-bg={servijpg}></div>
 											<div className="overlay"></div>
 											<div className="inner">
 												<span className="cf-inner_title color-bg">Read more</span>
@@ -327,7 +341,7 @@ const Home = () => {
 											</div>
 										</div>
 										<div className="content-back">
-											<div className="bg " data-bg="images/services/6.jpg"></div>
+											<div className="bg " data-bg={servxijpg}></div>
 											<div className="overlay"></div>
 											<div className="inner">
 												<span className="cf-inner_title color-bg">Read more</span>
@@ -351,7 +365,7 @@ const Home = () => {
 											</div>
 										</div>
 										<div className="content-back">
-											<div className="bg " data-bg="images/services/3.jpg"></div>
+											<div className="bg " data-bg={serviiijpg}></div>
 											<div className="overlay"></div>
 											<div className="inner">
 												<span className="cf-inner_title color-bg">Read more</span>
@@ -385,7 +399,7 @@ const Home = () => {
 										<div className="swiper-slide">
 											<div className="half-carousel-item fl-wrap">
 												<div className="bg-wrap bg-parallax-wrap-gradien">
-													<div className="bg" data-bg="images/bg/long/1.jpg" data-swiper-parallax="10%"></div>
+													<div className="bg" data-bg={longijpg} data-swiper-parallax="10%"></div>
 												</div>
 												<div className="hc-counter color-bg">01.</div>
 												<div className="half-carousel-content">
@@ -397,7 +411,7 @@ const Home = () => {
 										<div className="swiper-slide">
 											<div className="half-carousel-item fl-wrap">
 												<div className="bg-wrap bg-parallax-wrap-gradien">
-													<div className="bg" data-bg="images/bg/long/2.jpg" data-swiper-parallax="10%"></div>
+													<div className="bg" data-bg={longiijpg} data-swiper-parallax="10%"></div>
 												</div>
 												<div className="hc-counter color-bg">02.</div>
 												<div className="half-carousel-content">
@@ -409,7 +423,7 @@ const Home = () => {
 										<div className="swiper-slide">
 											<div className="half-carousel-item fl-wrap">
 												<div className="bg-wrap bg-parallax-wrap-gradien">
-													<div className="bg" data-bg="images/bg/long/3.jpg" data-swiper-parallax="10%"></div>
+													<div className="bg" data-bg={longiiijpg} data-swiper-parallax="10%"></div>
 												</div>
 												<div className="hc-counter color-bg">03.</div>
 												<div className="half-carousel-content">
@@ -422,7 +436,7 @@ const Home = () => {
 										<div className="swiper-slide">
 											<div className="half-carousel-item fl-wrap">
 												<div className="bg-wrap bg-parallax-wrap-gradien">
-													<div className="bg" data-bg="images/bg/long/4.jpg" data-swiper-parallax="10%"></div>
+													<div className="bg" data-bg={longivjpg} data-swiper-parallax="10%"></div>
 												</div>
 												
 												<div className="hc-counter color-bg">04.</div>
@@ -511,7 +525,7 @@ const Home = () => {
 				
 				<section className="paralax-section sm-bg-par" data-scrollax-parent="true">
 					<div className="bg_wrap">
-						<div className="bg" data-bg="images/bg/19.jpg" data-scrollax="properties: { translateY: '30%' }"></div>
+						<div className="bg" data-bg={bgxixjpg} data-scrollax="properties: { translateY: '30%' }"></div>
 						<div className="gradinet-overlay"></div>
 					</div>
 					<div className="container">

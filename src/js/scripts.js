@@ -1,16 +1,17 @@
  // All functions  ------------------
  
+ console.log("Start");
+ setTimeout(function() {
+
  
  function initTheroof() {
 	 $('head').append('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">');
      "use strict";
     try{
         $(".loader-holder").fadeOut(500, function() {
-            
             $("#main").animate({
                 opacity: "1"
             }, 500);
-            alert("Helo world 333")
         });
     }
      
@@ -869,3 +870,8 @@
  // Init all functions------------------
  initTheroof();
  initparallax();
+
+
+
+}, 5000);
+console.log("End");
