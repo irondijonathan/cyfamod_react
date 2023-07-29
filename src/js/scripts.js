@@ -11,6 +11,7 @@
      "use strict";
     try{
         $(".loader-holder").fadeOut(500, function() {
+            console.log("alert")
             
             $("#main").animate({
                 opacity: "1"

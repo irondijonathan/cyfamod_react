@@ -4,10 +4,9 @@ import './App.css'
 import {Routes, Route} from "react-router-dom"
 
 //Js scripts for animations
-import "./../src/js/scripts.js"
-import "./../src/js/cs.js"
+import "./../src/js/jquery.min.js"
 import "./../src/js/plugins.js"
-import "./../src/js/map.js"
+import "./../src/js/scripts.js"
 
 
 
