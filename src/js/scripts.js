@@ -1,5 +1,7 @@
  // All functions  ------------------
- 
+ function rel(){
+    alert("Url changed")
+ }
  console.log("Start");
  setTimeout(function() {
 
@@ -9,6 +11,7 @@
      "use strict";
     try{
         $(".loader-holder").fadeOut(500, function() {
+            
             $("#main").animate({
                 opacity: "1"
             }, 500);

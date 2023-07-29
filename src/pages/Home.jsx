@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react';
 import "./../styles/style.css"
 import "./../styles/plugins.css"
 import "./../styles/cs-style.css"
@@ -26,6 +28,29 @@ import longivjpg from "./../images/bg/long/4.jpg"
 
 
 const Home = () => {
+
+    const [hasUrlChanged, setHasUrlChanged] = useState(false);
+  const [previousUrl, setPreviousUrl] = useState(window.location.href);
+
+  useEffect(() => {
+    const handleUrlChange = () => {
+      const currentUrl = window.location.href;
+      if (currentUrl !== previousUrl) {
+        console.log("True")
+        setHasUrlChanged(true);
+        setPreviousUrl(currentUrl);
+      } else {
+        console.log("False")
+        setHasUrlChanged(false);
+      }
+    };
+
+    window.addEventListener('popstate', handleUrlChange);
+
+    return () => {
+      window.removeEventListener('popstate', handleUrlChange);
+    };
+  }, [previousUrl]);
   return (
     <div>
 
@@ -105,17 +130,17 @@ const Home = () => {
 						<nav>
 							<ul>
 								<li>
-									<a href="index.html" className="act-link">Home </a>
+									<Link to="/" className="act-link">Home </Link>
 								
 								</li>
 							
 								
 								<li><a href="#">Blog</a></li>
 									
-								<li><a href="services.html">Services</a></li>
+								<li><Link to="/services">Services</Link></li>
 								
 					
-								<li><a href="contact.html">Contact</a></li>
+								<li><Link to="/contact">Contact</Link></li>
 
 							</ul>
 						</nav>

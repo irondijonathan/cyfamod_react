@@ -1,8 +1,34 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { useEffect, useState } from 'react';
+import logopng from "./../images/logo.png"
+import bgiiijpg from "./../images/bg/3.jpg"
 
 const Contact = () => {
+	const [hasUrlChanged, setHasUrlChanged] = useState(false);
+  const [previousUrl, setPreviousUrl] = useState(window.location.href);
+
+  useEffect(() => {
+    const handleUrlChange = () => {
+      const currentUrl = window.location.href;
+      if (currentUrl !== previousUrl) {
+		console.log("True")
+        setHasUrlChanged(true);
+        setPreviousUrl(currentUrl);
+      } else {
+		console.log(false)
+        setHasUrlChanged(false);
+      }
+    };
+
+    window.addEventListener('popstate', handleUrlChange);
+
+    return () => {
+      window.removeEventListener('popstate', handleUrlChange);
+    };
+  }, [previousUrl]);
   return (
-    <body>
+    <div>
 	
 	<div className="loader-holder">
 		<span></span>
@@ -39,7 +65,7 @@ const Contact = () => {
 			</div>
 			<div className="header-inner fl-wrap">
 				<div className="container">
-					<a href="index.html" className="logo-holder"><img src="images/logo.png" alt=""/></a>
+					<Link to="/" className="logo-holder"><img src={logopng} alt=""/></Link>
 					
 					<a href="#" className="header-btn color-bg"><span>WELCOME </span> </a>
 					<div className="search_btn htact show_search-btn"><i className="far fa-search"></i> <span className="header-tooltip">Search</span></div>
@@ -47,10 +73,19 @@ const Contact = () => {
 					
 					<div className="header-search-wrap novis_sarch">
 						<div className="widget-inner">
-							<form>
-								<input name="se" id="se" type="text" className="search" placeholder="Search..." value="" />
-								<button className="search-submit" id="submit_btn"><i className="fa fa-search transition"></i> </button>
-							</form>
+						<form>
+							<input
+								name="se"
+								id="se"
+								type="text"
+								className="search"
+								placeholder="Search..."
+								defaultValue=""
+							/>
+							<button className="search-submit" id="submit_btn">
+								<i className="fa fa-search transition"></i>
+							</button>
+						</form>
 						</div>
 					</div>
 					
@@ -71,17 +106,17 @@ const Contact = () => {
 						<nav>
 							<ul>
 								<li>
-									<a href="index.html" className="act-link">Home </a>
+									<Link to="/" className="act-link">Home </Link>
 								
 								</li>
 							
 								
-								<li><a href="#">Blog</a></li>
+								<li><Link to="/">Blog</Link></li>
 									
-								<li><a href="services.html">Services</a></li>
-								<li><a href="project.html">Projects </a></li>
+								<li><Link to="/services">Services</Link></li>
+								<li><Link to="/">Projects </Link></li>
 					
-								<li><a href="contact.html">Contact</a></li>
+								<li><Link to="/contact">Contact</Link></li>
 
 							</ul>
 						</nav>
@@ -97,7 +132,7 @@ const Contact = () => {
 				
 				<section className="no-padding" data-scrollax-parent="true">
 					<div className="parallax-inner page-title-wrap">
-						<div className="bg" data-bg="images/bg/3.jpg" data-scrollax="properties: { translateY: '40%' }"></div>
+						<div className="bg" data-bg={bgiiijpg} data-scrollax="properties: { translateY: '40%' }"></div>
 						<div className="parallax-wrap">
 							<div className="container">
 								<div className="page-title">
@@ -294,7 +329,7 @@ const Contact = () => {
         		
 	</div>
 	
-</body>
+</div>
   )
 }
 
