@@ -8,16 +8,30 @@
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-    <script src="/src/js/jquery.min.js" ></script>
-    <script src="/src/js/plugins.js" ></script>
-    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-    <div class="elfsight-app-fb18c80e-9fe4-470d-a44d-e6d2d0aecf09"></div>
-    <script src="/src/js/scripts.js" ></script>
+    <script type="module">
+      // Get the base URL dynamically using import.meta.env
+      const baseUrl = import.meta.env.BASE_URL;
 
-    
+      // Load your JavaScript files using the correct base URL
+      // Assuming your dist directory contains the output files
+      // Adjust the paths as needed if your dist folder structure is different
+      const scripts = [
+        `${baseUrl}/src/main.jsx`,
+        `${baseUrl}/src/js/jquery.min.js`,
+        `${baseUrl}/src/js/plugins.js`,
+        `${baseUrl}/src/js/scripts.js`,
+        `https://apps.elfsight.com/p/platform.js`,
+      ];
+
+      // Create script elements and append them to the document
+      scripts.forEach((src) => {
+        const script = document.createElement("script");
+        script.src = src;
+        script.defer = true;
+        document.body.appendChild(script);
+      });
+    </script>
+
+    <div class="elfsight-app-fb18c80e-9fe4-470d-a44d-e6d2d0aecf09"></div>
   </body>
 </html>
-
-
-
