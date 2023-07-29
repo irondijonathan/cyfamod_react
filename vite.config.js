@@ -23,9 +23,5 @@ export default defineConfig({
   build: {
     outDir: 'dist', // Set the output directory for the production build
   },
-  rollupOptions: {
-    input: {
-      main: './index.html',
-    },
-  },
+  
 })
